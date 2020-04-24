@@ -29,7 +29,7 @@
 		"url": "https://github.com/Nytra/MaximizedTerminal.git"
 	},
 	"activationEvents": [
-		"onCommand:maximizedterminal.maxTerm",
+		"onCommand:maximizeterminal.maxTerm",
 		"*"
 	],
 	"main": "./out/extension.js",
@@ -39,14 +39,14 @@
 		},
 		"commands": [
 			{
-				"command": "maximizedterminal.maxTerm",
+				"command": "maximizeterminal.maxTerm",
 				"title": "Maximize Terminal"
 			}
 		],
 		"keybindings": [
 			{
 				"key": "ctrl+;",      
-				"command": "maximizedterminal.maxTerm",            
+				"command": "maximizeterminal.maxTerm",            
 				"when": "!activePanel"
 			},
 			{
