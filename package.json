@@ -2,7 +2,7 @@
 	"name": "maximizeterminal",
 	"displayName": "Maximize Terminal",
 	"description": "Adds a key binding (ctrl+;) for toggling between maximized terminal and closed panel :)",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"engines": {
 		"vscode": "^1.44.0"
 	},
@@ -25,7 +25,10 @@
 	"license": "MIT",
 	"publisher": "samueltscott",
 	"icon": "icon.png",
-	"galleryBanner": {"color": "#cc3399", "theme": "dark"},
+	"galleryBanner": {
+		"color": "#cc3399",
+		"theme": "dark"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Nytra/MaximizedTerminal.git"
