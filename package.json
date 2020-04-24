@@ -1,6 +1,6 @@
 {
-	"name": "maximizedterminal",
-	"displayName": "Maximized Terminal",
+	"name": "maximizeterminal",
+	"displayName": "Maximize Terminal",
 	"description": "Adds a key binding (ctrl+;) for toggling between maximized terminal and closed panel :)",
 	"version": "1.0.0",
 	"engines": {
@@ -13,7 +13,7 @@
 		"maximize",
 		"maximized",
 		"terminal",
-		"maximizedterminal",
+		"maximizeterminal",
 		"fullscreen",
 		"enlarge",
 		"enlarged",
@@ -35,7 +35,7 @@
 	"main": "./out/extension.js",
 	"contributes": {
 		"configuration": {
-			"title": "MaximizedTerminal"
+			"title": "MaximizeTerminal"
 		},
 		"commands": [
 			{

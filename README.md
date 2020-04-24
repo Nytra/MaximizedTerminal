@@ -1,4 +1,4 @@
-# maximizedterminal README
+# maximizeterminal README
 
 Adds a key binding (ctrl+;) for toggling between maximized terminal and closed panel :)
 
