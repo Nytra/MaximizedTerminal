@@ -24,6 +24,10 @@
 	],
 	"license": "MIT",
 	"publisher": "samueltscott",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Nytra/MaximizedTerminal.git"
+	},
 	"activationEvents": [
 		"onCommand:maximizedterminal.maxTerm",
 		"*"
