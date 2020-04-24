@@ -24,7 +24,7 @@
 	],
 	"license": "MIT",
 	"publisher": "samueltscott",
-	"icon": "./icon.png",
+	"icon": "icon.png",
 	"galleryBanner": {"color": "#cc3399", "theme": "dark"},
 	"repository": {
 		"type": "git",
