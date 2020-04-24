@@ -11,6 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.executeCommand("workbench.panel.terminal.focus");
 		vscode.commands.executeCommand("workbench.action.focusPanel");
 		vscode.commands.executeCommand("workbench.action.terminal.focus");
+		
 	});
 
 	context.subscriptions.push(maxTerm);
