@@ -24,3 +24,5 @@ The extension may take a few seconds to initialize when you first use the key bi
 
 The extension now overrides the default keybinding for opening the terminal (ctrl+')
 Thanks to Pablo-MC on GitHub for this contribution!
+
+I will still be supporting both keybindings (ctrl+; and ctrl+') for now, but will probably switch to purely using the default keybinding in the future.
