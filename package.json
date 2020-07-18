@@ -51,6 +51,16 @@
 		],
 		"keybindings": [
 			{
+				"key": "ctrl+;",
+				"command": "maximizeterminal.maxTerm",
+				"when": "!activePanel"
+			},
+			{
+				"key": "ctrl+;",
+				"command": "workbench.action.closePanel",
+				"when": "activePanel || terminalFocus"
+			},
+			{
 				"key": "ctrl+oem_3",
 				"command": "maximizeterminal.maxTerm",
 				"when": "!activePanel"
