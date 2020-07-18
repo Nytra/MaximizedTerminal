@@ -23,4 +23,4 @@ Key binding is optimized for UK-layout keyboard (No other keyboard layouts teste
 The extension may take a few seconds to initialize when you first use the key binding.
 
 The extension now overrides the default keybinding for opening the terminal (ctrl+')
-Thanks to Pablo-MC on GitHub for this contribution!
+Thanks to ![Pablo-MC](https://github.com/Pablo-MC) on GitHub for this contribution!
