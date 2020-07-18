@@ -2,9 +2,9 @@
 
 Have you ever been frustrated that the integrated terminal is too small? Find yourself manually clicking the maximize button often? Yes? Then this extension is for you! 
 
-Adds a new key binding (ctrl+;) for toggling between maximized terminal and closed panel :)
+Allows you to open the terminal in its maximized state (with ctrl+; or ctrl+')
 
-This extension is helpful if you have a low resolution display (like me), or you're on Windows and don't use the native terminal (like me).
+Useful if you have a low resolution display.
 
 ## Extension Commands
 
@@ -22,5 +22,5 @@ Key binding is optimized for UK-layout keyboard (No other keyboard layouts teste
 
 The extension may take a few seconds to initialize when you first use the key binding.
 
-I tried to get this extension to override the default key binding for toggle terminal (ctrl + ') 
-but nothing I tried would work :(
+The extension now overrides the default keybinding for opening the terminal (ctrl+')
+Thanks to Pablo-MC on GitHub for this contribution!
