@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 
 	// show message on first activation of the extension
-	vscode.window.showInformationMessage("You can now use ctrl+' to open the maximized terminal :)");
+	//vscode.window.showInformationMessage("You can now use ctrl+' to open the maximized terminal :)");
 
 	let maxTerm = vscode.commands.registerCommand('maximizeterminal.maxTerm', () => {
 

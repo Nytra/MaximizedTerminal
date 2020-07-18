@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const vscode = require("vscode");
 function activate(context) {
     // show message on first activation of the extension
-    vscode.window.showInformationMessage("You can now use ctrl+' to open the maximized terminal :)");
+    //vscode.window.showInformationMessage("You can now use ctrl+' to open the maximized terminal :)");
     let maxTerm = vscode.commands.registerCommand('maximizeterminal.maxTerm', () => {
         // these commands are necessary to get the orange focus outline to appear in the right place
         vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
