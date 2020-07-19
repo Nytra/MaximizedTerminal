@@ -1,7 +1,7 @@
 {
 	"name": "maximizeterminal",
 	"displayName": "Maximize Terminal",
-	"description": "Adds a key binding (ctrl+;) for toggling between maximized terminal and closed panel :)",
+	"description": "Adds keybindings for opening and closing a maximized terminal :)",
 	"version": "2.0.1",
 	"engines": {
 		"vscode": "^1.47.0"
