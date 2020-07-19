@@ -1,9 +1,19 @@
 import * as vscode from 'vscode';
 
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
 
 	// show message on first activation of the extension
-	//vscode.window.showInformationMessage("You can now use ctrl+' to open the maximized terminal :)");
+
+	context.globalState.update("informationMessageShown", false);
+	if (!context.globalState.get("informationMessageShown")) {
+		vscode.window.showInformationMessage("You can now use ctrl+' to maximize the terminal. This behaviour can be reconfigured in settings.",
+		 "Go to settings").then(selection => {
+			context.globalState.update("informationMessageShown", true);
+			if (selection === "Go to settings") {
+				vscode.commands.executeCommand( 'workbench.action.openSettings', 'maximizeterminal.useAlternativeKeybinding' );
+			}
+		 });
+	}
 
 	let maxTerm = vscode.commands.registerCommand('maximizeterminal.maxTerm', () => {
 
@@ -11,12 +21,15 @@ export function activate(context: vscode.ExtensionContext) {
 
 		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
 
-		// we don't use the toggleTerminal command, because it doesn't work the way we want
 		//vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
 
 		vscode.commands.executeCommand("workbench.panel.terminal.focus");
 		vscode.commands.executeCommand("workbench.action.focusPanel");
 		vscode.commands.executeCommand("workbench.action.terminal.focus");
+
+		//let config = vscode.workspace.getConfiguration('maximizeterminal');
+
+		//vscode.window.showInformationMessage("informationMessageShown: " + context.globalState.get("informationMessageShown"));
 	});
 
 	context.subscriptions.push(maxTerm);
