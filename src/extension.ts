@@ -4,7 +4,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	// show message on first activation of the extension
 
-	context.globalState.update("informationMessageShown", false);
+	//context.globalState.update("informationMessageShown", false);
 	if (!context.globalState.get("informationMessageShown")) {
 		vscode.window.showInformationMessage("You can now use ctrl+' to maximize the terminal. This behaviour can be reconfigured in settings.",
 		 "Go to settings").then(selection => {
