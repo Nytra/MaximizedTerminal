@@ -6,6 +6,12 @@ Allows you to open the terminal in its maximized state with ctrl+' (this keybind
 
 Useful if you have a low resolution display.
 
+## Extension Settings
+
+These can be found in settings->extensions->maximizeterminal
+
+* `Use Alternative Keybinding`: use ctrl+; to invoke the extension, and leave ctrl+' with its default behaviour
+
 ## Extension Commands
 
 This extension implements the following commands:
@@ -19,4 +25,5 @@ And it uses the following built-in commands:
 ## Notes
 
 The extension now overrides the default keybinding for opening the terminal (ctrl+')
-Thanks to Pablo-MC on GitHub for this contribution!
+
+Thanks to `Pablo-MC` on GitHub for this contribution!

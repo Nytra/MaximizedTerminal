@@ -1,5 +1,9 @@
 # Change Log
 
+## [2.0.3] - 2020-7-19
+- Update readme with more information about the new configuration option
+- Change extension category to "Keymaps"
+
 ## [2.0.2] - 2020-7-19
 ### Changed
 - Made ctrl+' the default keybinding for invoking the extension
