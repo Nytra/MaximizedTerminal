@@ -14,7 +14,7 @@ const vscode = require("vscode");
 function activate(context) {
     return __awaiter(this, void 0, void 0, function* () {
         // show message on first activation of the extension
-        context.globalState.update("informationMessageShown", false);
+        //context.globalState.update("informationMessageShown", false);
         if (!context.globalState.get("informationMessageShown")) {
             vscode.window.showInformationMessage("You can now use ctrl+' to maximize the terminal. This behaviour can be reconfigured in settings.", "Go to settings").then(selection => {
                 context.globalState.update("informationMessageShown", true);
