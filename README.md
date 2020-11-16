@@ -2,9 +2,21 @@
 
 Have you ever been frustrated that the integrated terminal is too small? Find yourself manually clicking the maximize button often? Yes? Then this extension is for you! 
 
-Allows you to open the terminal in its maximized state with ctrl+' (this keybind can be changed in settings)
+## How do I use it?
 
-Useful if you have a low resolution display.
+Just press `ctrl+'` and your terminal will now open in its maximized state.
+
+This keybinding can be reconfigured to some extent.
+
+## Why is it useful?
+
+It's useful if: 
+
+- You have a low resolution display
+
+- You don't use the native terminal for your platform
+
+- You just want the terminal to feel more separated from your text/source files
 
 ## Extension Settings
 
@@ -24,6 +36,4 @@ And it uses the following built-in commands:
 
 ## Notes
 
-The extension now overrides the default keybinding for opening the terminal (ctrl+')
-
-Thanks to `Pablo-MC` on GitHub for this contribution!
+If this extension breaks in the future, please submit a new issue at the GitHub repository.
