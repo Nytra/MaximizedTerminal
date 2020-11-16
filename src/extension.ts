@@ -15,24 +15,40 @@ export async function activate(context: vscode.ExtensionContext) {
 		 });
 	}
 
-	let maxTerm = vscode.commands.registerCommand('maximizeterminal.maxTerm', () => {
+	let maxTerm = vscode.commands.registerCommand('maximizeterminal.openMaximizedTerminal', () => {
 
-		// these commands are necessary to get the orange focus outline to appear in the right place
-
+		vscode.commands.executeCommand("workbench.action.togglePanel");
 		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
 
 		//vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
 
-		vscode.commands.executeCommand("workbench.panel.terminal.focus");
-		vscode.commands.executeCommand("workbench.action.focusPanel");
-		vscode.commands.executeCommand("workbench.action.terminal.focus");
+		// broken. possibly deprecated?
+		//vscode.commands.executeCommand("workbench.panel.terminal.focus"); 
+
+		//vscode.commands.executeCommand("workbench.action.focusPanel");
+		//vscode.commands.executeCommand("workbench.action.terminal.focus");
+
+		vscode.commands.executeCommand("terminal.focus");
 
 		//let config = vscode.workspace.getConfiguration('maximizeterminal');
+		//vscode.commands.getCommands().then(onfulfilled => {console.log(onfulfilled);});
+		
+		//vscode.window.showInformationMessage("maxTerm called");
+	});
 
-		//vscode.window.showInformationMessage("informationMessageShown: " + context.globalState.get("informationMessageShown"));
+	let minTerm = vscode.commands.registerCommand('maximizeterminal.openMinimizedTerminal', () => {
+
+		vscode.commands.executeCommand("workbench.action.togglePanel");
+		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
+		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
+
+		vscode.commands.executeCommand("terminal.focus");
+
+		//vscode.window.showInformationMessage("minTerm called");
 	});
 
 	context.subscriptions.push(maxTerm);
+	context.subscriptions.push(minTerm);
 }
 
 // executed on deactivation of the extension

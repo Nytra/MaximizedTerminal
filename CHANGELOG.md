@@ -1,5 +1,9 @@
 # Change Log
 
+## [2.1.0] - 2020-11-16
+- Updated extension to function correctly on new VS Code version (1.51.1)
+- Implemented new Command Palette function "Open Minimized Terminal", which opens a minimized terminal
+
 ## [2.0.3] - 2020-7-19
 - Update readme with more information about the new configuration option
 - Change extension category to "Keymaps"

@@ -4,7 +4,7 @@
 	"description": "Adds keybindings for opening and closing a maximized terminal :)",
 	"version": "2.0.3",
 	"engines": {
-		"vscode": "^1.47.0"
+		"vscode": "^1.51.1"
 	},
 	"categories": [
 		"Keymaps",
@@ -36,7 +36,8 @@
 		"url": "https://github.com/Nytra/MaximizedTerminal.git"
 	},
 	"activationEvents": [
-		"onCommand:maximizeterminal.maxTerm",
+		"onCommand:maximizeterminal.openMinimizedTerminal",
+		"onCommand:maximizeterminal.openMaximizedTerminal",
 		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
@@ -53,30 +54,44 @@
 		},
 		"commands": [
 			{
-				"command": "maximizeterminal.maxTerm",
-				"title": "Maximize Terminal"
+				"command": "maximizeterminal.openMaximizedTerminal",
+				"title": "Open Maximized Terminal"
+			},
+			{
+				"command": "maximizeterminal.openMinimizedTerminal",
+				"title": "Open Minimized Terminal"
 			}
 		],
 		"keybindings": [
 			{
 				"key": "ctrl+;",
-				"command": "maximizeterminal.maxTerm",
+				"command": "maximizeterminal.openMaximizedTerminal",
 				"when": "config.maximizeterminal.useAlternativeKeybinding && !activePanel"
 			},
 			{
 				"key": "ctrl+;",
 				"command": "workbench.action.closePanel",
-				"when": "config.maximizeterminal.useAlternativeKeybinding && activePanel || terminalFocus"
+				"when": "config.maximizeterminal.useAlternativeKeybinding && activePanel"
 			},
 			{
 				"key": "ctrl+oem_3",
-				"command": "maximizeterminal.maxTerm",
+				"command": "maximizeterminal.openMaximizedTerminal",
 				"when": "!config.maximizeterminal.useAlternativeKeybinding && !activePanel"
 			},
 			{
 				"key": "ctrl+oem_3",
 				"command": "workbench.action.closePanel",
-				"when": "!config.maximizeterminal.useAlternativeKeybinding && activePanel || terminalFocus"
+				"when": "!config.maximizeterminal.useAlternativeKeybinding && activePanel"
+			},
+			{
+				"key": "ctrl+oem_3",
+				"command": "maximizeterminal.openMinimizedTerminal",
+				"when": "config.maximizeterminal.useAlternativeKeybinding && !activePanel"
+			},
+			{
+				"key": "ctrl+oem_3",
+				"command": "workbench.action.closePanel",
+				"when": "config.maximizeterminal.useAlternativeKeybinding && activePanel"
 			}
 		]
 	},

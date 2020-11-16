@@ -28,7 +28,9 @@ These can be found in settings->extensions->maximizeterminal
 
 This extension implements the following commands:
 
-* `Maximize Terminal`: opens the terminal in its maximized state
+* `Open Maximized Terminal`: opens the terminal in its maximized state
+
+* `Open Minimized Terminal`: opens the terminal in its minimized state
 
 And it uses the following built-in commands:
 
