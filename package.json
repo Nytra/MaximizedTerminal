@@ -2,7 +2,7 @@
 	"name": "maximizeterminal",
 	"displayName": "Maximize Terminal",
 	"description": "Adds keybindings for opening and closing a maximized terminal :)",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"engines": {
 		"vscode": "^1.51.1"
 	},
