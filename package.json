@@ -80,18 +80,13 @@
 			},
 			{
 				"key": "ctrl+oem_3",
-				"command": "workbench.action.closePanel",
-				"when": "!config.maximizeterminal.useAlternativeKeybinding && activePanel"
-			},
-			{
-				"key": "ctrl+oem_3",
 				"command": "maximizeterminal.openMinimizedTerminal",
 				"when": "config.maximizeterminal.useAlternativeKeybinding && !activePanel"
 			},
 			{
 				"key": "ctrl+oem_3",
 				"command": "workbench.action.closePanel",
-				"when": "config.maximizeterminal.useAlternativeKeybinding && activePanel"
+				"when": "activePanel"
 			}
 		]
 	},
