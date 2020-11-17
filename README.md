@@ -38,4 +38,4 @@ And it uses the following built-in commands:
 
 ## Notes
 
-If this extension breaks in the future, please submit a new issue at the GitHub repository.
+If this extension breaks in the future, please submit a new issue at the [GitHub repository](https://github.com/Nytra/MaximizedTerminal).
