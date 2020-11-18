@@ -3,6 +3,8 @@
 ## [2.1.1] - 2020-11-17
 ### Changed
 - Cleanup and removal of unnecessary keybinding declarations in package.json
+- Fix terminal to not move the input line to the bottom of the screen after going from minimized to maximized state.
+- Cleanup of source code, and added comments
 
 ## [2.1.0] - 2020-11-16
 ### Changed
