@@ -57,6 +57,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 		vscode.commands.executeCommand("terminal.focus");
 
+		// call this to stop the terminal from moving the input line to the bottom when pressing a key after going from minimized to maximized state
 		vscode.commands.executeCommand("panel.focusPanel");
 
 		//vscode.window.showInformationMessage("minTerm called");
