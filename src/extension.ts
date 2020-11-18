@@ -63,6 +63,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		//vscode.window.showInformationMessage("minTerm called");
 	});
 
+	// subscribe to the disposables for the functions above. when the extension deactivates, these functions will be unregistered.
 	context.subscriptions.push(maxTerm);
 	context.subscriptions.push(minTerm);
 }
