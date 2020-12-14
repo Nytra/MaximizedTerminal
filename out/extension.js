@@ -43,6 +43,10 @@ function activate(context) {
             //vscode.commands.getCommands().then(onfulfilled => {console.log(onfulfilled);});
             //vscode.window.showInformationMessage("maxTerm called");
         });
+        let closeMaxTerm = vscode.commands.registerCommand('maximizeterminal.closeMaximizedTerminal', () => {
+            vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
+            vscode.commands.executeCommand("workbench.action.closePanel");
+        });
         let minTerm = vscode.commands.registerCommand('maximizeterminal.openMinimizedTerminal', () => {
             // sequence of commands to open a minimized terminal. again, possibly non-optimal.
             // 'if it works and it ain't broke, don't fix it.'
@@ -56,6 +60,7 @@ function activate(context) {
         });
         // subscribe to the disposables for the functions above. when the extension deactivates, these functions will be unregistered.
         context.subscriptions.push(maxTerm);
+        context.subscriptions.push(closeMaxTerm);
         context.subscriptions.push(minTerm);
     });
 }
