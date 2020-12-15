@@ -70,7 +70,7 @@
 			},
 			{
 				"key": "ctrl+;",
-				"command": "workbench.action.closePanel",
+				"command": "maximizeterminal.closeMaximizedTerminal",
 				"when": "config.maximizeterminal.useAlternativeKeybinding && activePanel"
 			},
 			{
@@ -85,7 +85,7 @@
 			},
 			{
 				"key": "ctrl+oem_3",
-				"command": "workbench.action.closePanel",
+				"command": "maximizeterminal.closeMaximizedTerminal",
 				"when": "activePanel"
 			}
 		]
