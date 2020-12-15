@@ -68,5 +68,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(minTerm);
 }
 
+// blah
+
 // executed on deactivation of the extension
 export function deactivate() {}
