@@ -38,6 +38,7 @@
 	"activationEvents": [
 		"onCommand:maximizeterminal.openMinimizedTerminal",
 		"onCommand:maximizeterminal.openMaximizedTerminal",
+		"onCommand:maximizeterminal.closeMaximizedTerminal",
 		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
@@ -55,11 +56,15 @@
 		"commands": [
 			{
 				"command": "maximizeterminal.openMaximizedTerminal",
-				"title": "Open Maximized Terminal"
+				"title": "Maximized Terminal: Open Maximized Terminal"
 			},
 			{
 				"command": "maximizeterminal.openMinimizedTerminal",
-				"title": "Open Minimized Terminal"
+				"title": "Maximized Terminal: Open Minimized Terminal"
+			},
+			{
+				"command": "maximizeterminal.closeMaximizedTerminal",
+				"title": "Maximized Terminal: Close Maximized Terminal"
 			}
 		],
 		"keybindings": [
