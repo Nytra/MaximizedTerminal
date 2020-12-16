@@ -56,15 +56,15 @@
 		"commands": [
 			{
 				"command": "maximizeterminal.openMaximizedTerminal",
-				"title": "Maximized Terminal: Open Maximized Terminal"
+				"title": "Maximize Terminal: Open Maximized Terminal"
 			},
 			{
 				"command": "maximizeterminal.openMinimizedTerminal",
-				"title": "Maximized Terminal: Open Minimized Terminal"
+				"title": "Maximize Terminal: Open Minimized Terminal"
 			},
 			{
 				"command": "maximizeterminal.closeMaximizedTerminal",
-				"title": "Maximized Terminal: Close Maximized Terminal"
+				"title": "Maximize Terminal: Close Maximized Terminal"
 			}
 		],
 		"keybindings": [
