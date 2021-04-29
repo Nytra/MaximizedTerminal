@@ -38,6 +38,7 @@
 	"activationEvents": [
 		"onCommand:maximizeterminal.openMinimizedTerminal",
 		"onCommand:maximizeterminal.openMaximizedTerminal",
+		"onCommand:maximizeterminal.closeMaximizedTerminal",
 		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
@@ -55,11 +56,15 @@
 		"commands": [
 			{
 				"command": "maximizeterminal.openMaximizedTerminal",
-				"title": "Open Maximized Terminal"
+				"title": "Maximize Terminal: Open Maximized Terminal"
 			},
 			{
 				"command": "maximizeterminal.openMinimizedTerminal",
-				"title": "Open Minimized Terminal"
+				"title": "Maximize Terminal: Open Minimized Terminal"
+			},
+			{
+				"command": "maximizeterminal.closeMaximizedTerminal",
+				"title": "Maximize Terminal: Close Maximized Terminal"
 			}
 		],
 		"keybindings": [
@@ -70,7 +75,7 @@
 			},
 			{
 				"key": "ctrl+;",
-				"command": "workbench.action.closePanel",
+				"command": "maximizeterminal.closeMaximizedTerminal",
 				"when": "config.maximizeterminal.useAlternativeKeybinding && activePanel"
 			},
 			{
@@ -85,7 +90,7 @@
 			},
 			{
 				"key": "ctrl+oem_3",
-				"command": "workbench.action.closePanel",
+				"command": "maximizeterminal.closeMaximizedTerminal",
 				"when": "activePanel"
 			}
 		]
