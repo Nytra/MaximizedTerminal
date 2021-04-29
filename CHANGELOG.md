@@ -1,10 +1,10 @@
 # Change Log
 
-## [2.1.1] - 2020-11-17
+## [2.1.1] - 2021-04-29
 ### Changed
-- Cleanup and removal of unnecessary keybinding declarations in package.json
-- Fix terminal to not move the input line to the bottom of the screen after going from minimized to maximized state.
-- Cleanup of source code, and added comments
+- Update for vscode version 1.55.2
+- Merge PR #4 "Use custom closeMaximizedTerminal to close the terminal" (Thanks vHanda)
+-- This way when opening the Problems Tabs of the panel, it will not be not be maximized.
 
 ## [2.1.0] - 2020-11-16
 ### Changed

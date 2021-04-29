@@ -4,7 +4,7 @@
 	"description": "Adds keybindings for opening and closing a maximized terminal :)",
 	"version": "2.1.0",
 	"engines": {
-		"vscode": "^1.51.1"
+		"vscode": "^1.55.2"
 	},
 	"categories": [
 		"Keymaps",
