@@ -32,9 +32,7 @@ This extension implements the following commands:
 
 * `Open Minimized Terminal`: opens the terminal in its minimized state
 
-And it uses the following built-in commands:
-
-* `View: Close Panel`: closes the panel
+* `Close Maximized Terminal`: closes the terminal panel
 
 ## Notes
 
