@@ -44,7 +44,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		// output all api commands to console
 		//vscode.commands.getCommands().then(onfulfilled => {console.log(onfulfilled);});
 		
-		vscode.window.showInformationMessage("maxTerm called");
+		//vscode.window.showInformationMessage("maxTerm called");
   });
 
   // Added in Pull-Request #4
@@ -52,7 +52,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
 		vscode.commands.executeCommand("workbench.action.closePanel");
 
-		vscode.window.showInformationMessage("closeMaxTerm called");
+		//vscode.window.showInformationMessage("closeMaxTerm called");
 	});
 
 	let minTerm = vscode.commands.registerCommand('maximizeterminal.openMinimizedTerminal', () => {
@@ -72,7 +72,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		//vscode.commands.executeCommand("panel.focusPanel");
 		// ===
 
-		vscode.window.showInformationMessage("minTerm called");
+		//vscode.window.showInformationMessage("minTerm called");
 	});
 
 	// subscribe to the disposables for the functions above. when the extension deactivates, these functions will be unregistered.
