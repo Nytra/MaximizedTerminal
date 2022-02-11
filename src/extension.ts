@@ -1,13 +1,30 @@
+import { exec } from 'child_process';
 import * as vscode from 'vscode';
+
+let ctx:vscode.ExtensionContext;
+
+let test = vscode.commands.registerCommand('maximizeterminal.test', () => {
+	console.log("hello");
+	//vscode.window.activeTerminal.TerminalLocation
+	//vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
+	//let x = ctx.globalState.get("terminal.focus");
+	//let x = ctx.globalState.keys();
+	//let x = vscode.commands.executeCommand('workbench.action.inspectContextKeys');
+	//console.log());
+	//console.log(vscode.TerminalLocation);
+	
+	});
 
 export async function activate(context: vscode.ExtensionContext) {
 
+	ctx = context;
 	// show interactive message on first activation of the extension
-
+	vscode.commands.executeCommand("maximizeterminal.test");
+	//let terminal = vscode.window.activeTerminal;
+	
 	// === for debugging ===
 	//context.globalState.update("informationMessageShown", false);
 	// ===
-
 	// display information message if context's globalstate has key "informationMessageShown" with value: false
 	if (!context.globalState.get("informationMessageShown")) {
 		vscode.window.showInformationMessage("You can now use ctrl+' to maximize the terminal. This behaviour can be reconfigured in settings.",
@@ -79,6 +96,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(maxTerm);
 	context.subscriptions.push(closeMaxTerm);
 	context.subscriptions.push(minTerm);
+	context.subscriptions.push(test);
 }
 
 // executed on deactivation of the extension

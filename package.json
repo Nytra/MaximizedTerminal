@@ -92,6 +92,11 @@
 				"key": "ctrl+oem_3",
 				"command": "maximizeterminal.closeMaximizedTerminal",
 				"when": "activePanel"
+			},
+			{
+				"key": "o",
+				"command": "maximizeterminal.test",
+				"when": "activeAuxiliary && terminal.visible"
 			}
 		]
 	},
