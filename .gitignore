@@ -3,3 +3,4 @@ node_modules
 *.vsix
 dev_stuff.txt
 contextkeys.txt
+out/
