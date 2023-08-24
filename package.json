@@ -2,9 +2,9 @@
 	"name": "maximizeterminal",
 	"displayName": "Maximize Terminal",
 	"description": "Adds keybindings for opening and closing a maximized terminal :)",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"engines": {
-		"vscode": "^1.55.2"
+		"vscode": "^1.81.1"
 	},
 	"categories": [
 		"Keymaps",
@@ -71,32 +71,27 @@
 			{
 				"key": "ctrl+;",
 				"command": "maximizeterminal.openMaximizedTerminal",
-				"when": "config.maximizeterminal.useAlternativeKeybinding && !activePanel"
+				"when": "config.maximizeterminal.useAlternativeKeybinding && !activePanel && !activeAuxiliary"
 			},
 			{
 				"key": "ctrl+;",
 				"command": "maximizeterminal.closeMaximizedTerminal",
-				"when": "config.maximizeterminal.useAlternativeKeybinding && activePanel"
+				"when": "config.maximizeterminal.useAlternativeKeybinding && focusedView == terminal"
 			},
 			{
 				"key": "ctrl+oem_3",
 				"command": "maximizeterminal.openMaximizedTerminal",
-				"when": "!config.maximizeterminal.useAlternativeKeybinding && !activePanel"
+				"when": "!config.maximizeterminal.useAlternativeKeybinding && !activePanel && !activeAuxiliary"
 			},
 			{
 				"key": "ctrl+oem_3",
 				"command": "maximizeterminal.openMinimizedTerminal",
-				"when": "config.maximizeterminal.useAlternativeKeybinding && !activePanel"
+				"when": "config.maximizeterminal.useAlternativeKeybinding && !activePanel && !activeAuxiliary"
 			},
 			{
 				"key": "ctrl+oem_3",
 				"command": "maximizeterminal.closeMaximizedTerminal",
-				"when": "activePanel"
-			},
-			{
-				"key": "o",
-				"command": "maximizeterminal.test",
-				"when": "activeAuxiliary && terminal.visible"
+				"when": "focusedView == terminal"
 			}
 		]
 	},
@@ -117,8 +112,8 @@
 		"@typescript-eslint/parser": "^2.34.0",
 		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
-		"mocha": "^7.2.0",
-		"typescript": "^3.9.9",
+		"mocha": "^10.2.0",
+		"typescript": "^5.2.2",
 		"vscode-test": "^1.5.2"
 	}
 }

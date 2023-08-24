@@ -1,103 +1,79 @@
 import { exec } from 'child_process';
 import * as vscode from 'vscode';
 
-let ctx:vscode.ExtensionContext;
-
-let test = vscode.commands.registerCommand('maximizeterminal.test', () => {
-	console.log("hello");
-	//vscode.window.activeTerminal.TerminalLocation
+//let test = vscode.commands.registerCommand('maximizeterminal.test', () => {
+	//console.log("side panel function");
 	//vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
-	//let x = ctx.globalState.get("terminal.focus");
-	//let x = ctx.globalState.keys();
-	//let x = vscode.commands.executeCommand('workbench.action.inspectContextKeys');
-	//console.log());
-	//console.log(vscode.TerminalLocation);
-	
-	});
+//});
 
 export async function activate(context: vscode.ExtensionContext) {
 
-	ctx = context;
-	// show interactive message on first activation of the extension
-	vscode.commands.executeCommand("maximizeterminal.test");
-	//let terminal = vscode.window.activeTerminal;
+	//vscode.commands.executeCommand("maximizeterminal.test");
 	
-	// === for debugging ===
+	// === this line resets the key, for debugging the first install message ===
 	//context.globalState.update("informationMessageShown", false);
 	// ===
-	// display information message if context's globalstate has key "informationMessageShown" with value: false
+
+	//vscode.window.showInformationMessage("owo");
+
+	// display information message on first install
 	if (!context.globalState.get("informationMessageShown")) {
 		vscode.window.showInformationMessage("You can now use ctrl+' to maximize the terminal. This behaviour can be reconfigured in settings.",
 		 "Go to settings").then(selection => {
-			// on selection resolution, set key "informationMessageShown" to value: true (so that the message doesn't get shown again)
+			// on selection, set key "informationMessageShown" to true (so that the message doesn't get shown again)
 			context.globalState.update("informationMessageShown", true);
 			if (selection === "Go to settings") {
-				// go to settings
 				vscode.commands.executeCommand( 'workbench.action.openSettings', 'maximizeterminal.useAlternativeKeybinding' );
 			}
 		 });
 	}
 
-	// register command to maximize the terminal, store its disposable in a local variable (for subscribing to it later)
+	// toggles the maximized terminal
 	let maxTerm = vscode.commands.registerCommand('maximizeterminal.openMaximizedTerminal', () => {
-
-		// sequence of commands to maximize the terminal.
-
-		//vscode.commands.executeCommand("workbench.action.togglePanel");
+		
 		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
-
-		// not working..
-		//vscode.commands.executeCommand("terminal.focus");
-
-		vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
+		//vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
+		vscode.commands.executeCommand("workbench.action.terminal.focus");
+		
 
 		// === BROKEN ===
 		// call this to stop the terminal from moving the input line to the bottom when pressing a key after going from minimized to maximized state
 		//vscode.commands.executeCommand("panel.focusPanel");
 		// ===
 
-		//let config = vscode.workspace.getConfiguration('maximizeterminal');
+		//vscode.window.showInformationMessage("openMaximizedTerminal was called");
+  	});
 
-		// output all api commands to console
-		//vscode.commands.getCommands().then(onfulfilled => {console.log(onfulfilled);});
-		
-		//vscode.window.showInformationMessage("maxTerm called");
-  });
+  	// Added in PR #4
+	// Closes the maximized terminal
+  	let closeMaxTerm = vscode.commands.registerCommand('maximizeterminal.closeMaximizedTerminal', () => {
 
-  // Added in Pull-Request #4
-  let closeMaxTerm = vscode.commands.registerCommand('maximizeterminal.closeMaximizedTerminal', () => {
 		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
 		vscode.commands.executeCommand("workbench.action.closePanel");
 
-		//vscode.window.showInformationMessage("closeMaxTerm called");
+		//vscode.window.showInformationMessage("closeMaximizedTerminal was called");
 	});
 
+	// Opens minimized terminal
 	let minTerm = vscode.commands.registerCommand('maximizeterminal.openMinimizedTerminal', () => {
 
-		// sequence of commands to open a minimized terminal..
-
-		//vscode.commands.executeCommand("workbench.action.togglePanel");
 		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
 		vscode.commands.executeCommand("workbench.action.toggleMaximizedPanel");
-
-		//vscode.commands.executeCommand("terminal.focus");
-
-		vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
+		vscode.commands.executeCommand("workbench.action.terminal.focus");
+		//vscode.commands.executeCommand("workbench.action.terminal.toggleTerminal");
 
 		// === BROKEN ===
 		// call this to stop the terminal from moving the input line to the bottom when pressing a key after going from minimized to maximized state
 		//vscode.commands.executeCommand("panel.focusPanel");
 		// ===
 
-		//vscode.window.showInformationMessage("minTerm called");
+		//vscode.window.showInformationMessage("openMinimizedTerminal was called");
 	});
 
-	// subscribe to the disposables for the functions above. when the extension deactivates, these functions will be unregistered.
 	context.subscriptions.push(maxTerm);
 	context.subscriptions.push(closeMaxTerm);
 	context.subscriptions.push(minTerm);
-	context.subscriptions.push(test);
+	//context.subscriptions.push(test);
 }
 
-// executed on deactivation of the extension
 export function deactivate() {}
