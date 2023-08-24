@@ -1,5 +1,9 @@
 # Change Log
 
+## [2.1.2] - 2023-08-24
+### Changed
+- Fixed for vscode version 1.81.1
+
 ## [2.1.1] - 2021-04-29
 ### Changed
 - Update for vscode version 1.55.2
